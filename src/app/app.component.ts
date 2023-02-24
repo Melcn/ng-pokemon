@@ -2,23 +2,26 @@ import { Component, OnInit } from '@angular/core'; // Import les elements dont o
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
 
+
+/*-------------------VUE------------------*/
 @Component({
 
   selector: 'app-root',
-  template: `<h1> Liste de pokemons </h1>`
+  templateUrl: `app.component.html`
 
 
 })
 
+/*----------------LOGIQUE------------------*/ 
 export class AppComponent implements OnInit{
   pokemonList: Pokemon[] = POKEMONS;
 
   ngOnInit(){
     console.table(this.pokemonList);
-    this.selectPokemon(this.pokemonList[0]);
   }
 
-  selectPokemon(pokemon: Pokemon) { //method pour selectionner pkm
-    console.log(`Vous avez cliqué sur le pokemon ${pokemon.name}`);
+  selectPokemon(event: MouseEvent) { //method pour selectionner pkm
+    const index: number = +(event.target as HTMLInputElement).value;
+    console.log(`Vous avez cliqué sur le pokemon ${this.pokemonList[index].name}`);
   }
 }
