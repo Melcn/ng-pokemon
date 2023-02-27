@@ -1,20 +1,29 @@
-<h1>Liste de Pokemons</h1>
 
-<input  
-    #input
-    (keyup.enter)="selectPokemon(input.value)"
-    type="number" 
-    
-/>
+<h1 class="center">Liste de Pokemons</h1>
 
-<p *ngIf="pokemonSelected">
-    Vous avez selectionné le pokemon: {{ pokemonSelected?.name }}
-</p>
+<div class="container">
 
-<p *ngIf="!pokemonSelected">
-    Aucun pokemon n'a été trouvé
-</p>
+    <div class="row">
+        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img [src]="pokemon.picture" />
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p> {{ pokemon.name }} </p>
+                        <p><small> {{ pokemon.created }} </small></p>
+                    </div>
+                </div>   
+            </div> 
+            
+        </div>      
+    </div>
+</div>
 
-<p *ngFor="let pokemon of pokemonList">
-    {{ pokemon.name }}
-</p>
+
+
+<!-- Modifier le template grace à ngfor
+
+    Ajouter materialize
+    -->
