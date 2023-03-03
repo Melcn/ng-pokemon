@@ -14,8 +14,8 @@ import { Pokemon } from './pokemon';
 
 /*----------------LOGIQUE------------------*/ 
 export class AppComponent implements OnInit{
-  pokemonList: Pokemon[] = POKEMONS;
-  pokemonSelected: Pokemon|undefined;
+  public pokemonList: Pokemon[] = POKEMONS;
+  public pokemonSelected: Pokemon|undefined;
 
   ngOnInit(){
     console.table(this.pokemonList);
