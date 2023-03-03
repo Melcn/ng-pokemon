@@ -4,10 +4,10 @@
 <div class="container">
 
     <div class="row">
-        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-            <div class="card horizontal">
+        <div *ngFor="let pokemon of pokemonList" class="col s6 m4">
+            <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmnBorderCard>
                 <div class="card-image">
-                    <img [src]="pokemon.picture" />
+                    <img [src]="pokemon.picture">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
@@ -21,9 +21,3 @@
     </div>
 </div>
 
-
-
-<!-- Modifier le template grace à ngfor
-
-    Ajouter materialize
-    -->
