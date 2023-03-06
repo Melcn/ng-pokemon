@@ -1,5 +1,7 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
+// Directive generé par la cmd : ng generate directive border-card
+
 @Directive({
   selector: '[pkmnBorderCard]'
 })
