@@ -14,7 +14,9 @@ export class DetailPokemonComponent implements OnInit{
   pokemonList!: Pokemon[];
   pokemon: Pokemon|undefined;
 
+
   constructor(private route: ActivatedRoute, private router: Router) { }
+
 
   ngOnInit() {
     this.pokemonList = POKEMONS;
@@ -26,7 +28,9 @@ export class DetailPokemonComponent implements OnInit{
 
   }
 
+
   goToPokemonList() {
     this.router.navigate(['/pokemons']);
   }
+
 }
