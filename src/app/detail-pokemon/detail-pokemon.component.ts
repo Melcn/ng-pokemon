@@ -1,7 +1,10 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { POKEMONS } from '../mock-pokemon-list';
 import { Pokemon } from '../pokemon';
+
+
 
 @Component({
   selector: 'app-detail-pokemon',
@@ -9,6 +12,7 @@ import { Pokemon } from '../pokemon';
   styles: [
   ]
 })
+
 export class DetailPokemonComponent implements OnInit{
 
   pokemonList!: Pokemon[];
