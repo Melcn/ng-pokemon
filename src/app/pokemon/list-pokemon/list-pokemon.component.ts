@@ -1,7 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from '../pokemon';
 import { PokemonService } from '../pokemon.service';
+
 
 @Component({
   selector: 'app-list-pokemon',
@@ -9,6 +11,7 @@ import { PokemonService } from '../pokemon.service';
  
 })
 export class ListPokemonComponent {
+
   pokemonList!: Pokemon[];
 
   constructor(
@@ -19,6 +22,7 @@ export class ListPokemonComponent {
   ngOnInit() {
     this.pokemonList = this.pokemonService.getPokemonList();
   }
+
 
   goToPokemon(pokemon: Pokemon) {
     this.router.navigate(['/pokemon', pokemon.id]);
