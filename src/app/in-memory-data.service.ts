@@ -5,7 +5,7 @@ import { POKEMONS } from './pokemon/mock-pokemon-list';
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService{
 
   creatDb() {
     return { POKEMONS };
