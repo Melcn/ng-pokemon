@@ -12,6 +12,7 @@ export class PokemonService {
     return this.http.get<Pokemon[]>('api/pokemons').pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, []))
+
     );
   }
 
@@ -19,6 +20,7 @@ export class PokemonService {
     return this.http.get<Pokemon>(`api/pokemons/${pokemonId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, undefined))
+
     );
   }
 
