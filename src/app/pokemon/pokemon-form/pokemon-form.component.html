@@ -10,7 +10,7 @@
                     required
                     pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                    [(ngModel)]="pokemon.name" name="name"
-                   #name="ngModel">
+                   #name="ngModel"> <!-- represente un champ du formulaire --> 
     
             <div [hidden]="name.valid || name.pristine"
                   class="card-panel red accent-1">
