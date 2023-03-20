@@ -22,6 +22,12 @@ export class PokemonService {
     );
   }
 
+  searchPokemonList(term: string): Observable<Pokemon[]>{
+    return this.http.get<Pokemon[]>(`api/pokemons/?name=${term}`).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, []))
+    );
+  }
 
   updatePokemon(pokemon: Pokemon): Observable<null> {
     const httpOptions = {
